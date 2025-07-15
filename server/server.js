@@ -22,6 +22,6 @@ async function main(){
 app.use("/leader/",userRoute);
 app.use("/leader/",rewardRoute);
 
-app.listen(process.env.port,()=>{
+app.listen(8080,()=>{
     console.log(`server is listening on port!`)
 })
