@@ -10,13 +10,13 @@ const AddUser = () => {
     const navigate = useNavigate();
     
       const fetchUser = async () => {
-            const res = await axios.get("http://localhost:8080/leader/user");
+            const res = await axios.get(`${process.env.REACT_APP_BASE_API}/leader/user`);
             setUser(res.data);
         }
 
     const addnewUser = async () => {
         if (!newUser.trim()) return;
-        await axios.post(`http://localhost:8080/leader/user`, { name: newUser });
+        await axios.post(`${process.env.REACT_APP_BASE_API}/leader/user`, { name: newUser });
         setNewUser('');
         fetchUser();
         navigate('/select')
