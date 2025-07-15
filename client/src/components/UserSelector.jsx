@@ -12,7 +12,7 @@ const UserSelector = () => {
     const navigate = useNavigate();
 
     const fetchUser = async () => {
-        const res = await axios.get(`${process.env.VITE_APP_BASE_API}/leader/user`);
+        const res = await axios.get(`${import.meta.env.VITE_APP_BASE_API}/leader/user`);
         setUser(res.data);
        if(res.data.length > 0) setSelectedUser(res.data[0]._id);
     }
@@ -21,7 +21,7 @@ const UserSelector = () => {
     },[])
     const claimPoints = async ()=>{
         if(!selectedUser) return;
-        const res = await axios.post(`${process.env.VITE_APP_BASE_API}/leader/claim/${selectedUser}`)
+        const res = await axios.post(`${import.meta.env.VITE_APP_BASE_API}/leader/claim/${selectedUser}`)
         fetchUser();
         navigate('/leader');
     }
