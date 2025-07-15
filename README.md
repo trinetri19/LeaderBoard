@@ -35,37 +35,25 @@ README.md
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/leaderboard-system.git
-cd leaderboard-system
+git clone https://github.com/trinetri19/LeaderBoard
+cd leaderboard
 ```
 
  ### 2. Install Dependencies
  ```bash
 Backend
-bash
-Copy
-Edit
 cd server
 npm install
 Frontend
-bash
-Copy
-Edit
 cd ../client
 npm install
 ```
 ### 3. Start Development Servers
 ```bash
 Start Backend
-bash
-Copy
-Edit
 cd server
 npm start
 Start Frontend
-bash
-Copy
-Edit
 cd ../client
 npm start
 ```
