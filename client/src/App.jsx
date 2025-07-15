@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import UserSelector from './components/userSelector';
+import UserSelector from './components/UserSelector';
 import './App.css'
 import LeaderBoard from './components/LeaderBoard';
 import AddUser from './components/AddUser';
