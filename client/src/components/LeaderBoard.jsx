@@ -7,7 +7,7 @@ const LeaderBoard = () => {
     const [user, setUser] = useState([]);
 
     const fetchUser = async () => {
-        const res = await axios.get(`${process.env.REACT_APP_BASE_API}/leader/user`);
+        const res = await axios.get(`${process.env.VITE_APP_BASE_API}/leader/user`);
         setUser(res.data);
     }
 

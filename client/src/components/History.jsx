@@ -8,12 +8,12 @@ const History =()=>{
     const [user,setUsers] = useState([]);
 
      const fetchUsers = async () => {
-      const res = await axios.get(`${process.env.REACT_APP_BASE_API}/api/users`);
+      const res = await axios.get(`${process.env.VITE_APP_BASE_API}/api/users`);
       setUsers(res.data);
   };
 
     const fetchHistory =async  ()=>{
-      const res = await axios.get(`${process.env.REACT_APP_BASE_API}/leader/history`);
+      const res = await axios.get(`${process.env.VITE_APP_BASE_API}/leader/history`);
       setHistory(res.data)
     }
     useEffect(()=>{
