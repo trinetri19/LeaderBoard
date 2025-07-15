@@ -46,17 +46,9 @@ cd server
 npm install
 Frontend
 cd ../client
-npm install
+npm run dev
 ```
-### 3. Start Development Servers
-```bash
-Start Backend
-cd server
-npm start
-Start Frontend
-cd ../client
-npm start
-```
+
 
 
 
