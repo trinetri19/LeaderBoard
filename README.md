@@ -30,27 +30,32 @@ client/         # React frontend
 server/         # Node.js backend
 README.md
 ```
- # ⚙️ How to Run the Project
- ## 1. Clone the Repository
-   bash
-   Copy
-   Edit
-   **git clone**  https://github.com/your-username/leaderboard-system.git
-   cd leaderboard-system
-  ## 2. Install Dependencies
--Backend
--bash
--Copy
--Edit
--cd server
--npm install
--Frontend
--bash
--Copy
--Edit
--cd ../client
--npm install
-## 3. Start Development Servers
+## ⚙️ How to Run the Project
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/leaderboard-system.git
+cd leaderboard-system
+```
+
+ ### 2. Install Dependencies
+ ```bash
+Backend
+bash
+Copy
+Edit
+cd server
+npm install
+Frontend
+bash
+Copy
+Edit
+cd ../client
+npm install
+```
+### 3. Start Development Servers
+```bash
 Start Backend
 bash
 Copy
@@ -63,7 +68,7 @@ Copy
 Edit
 cd ../client
 npm start
-
+```
 
 
 
