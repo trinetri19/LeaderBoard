@@ -12,7 +12,7 @@ const AddUser = () => {
     const navigate = useNavigate();
     
       const fetchUser = async () => {
-            const res = await axios.get(`${server}/leader/user`);
+            const res = await axios.get(`${server}/user`);
             setUser(res.data);
         }
 
@@ -20,7 +20,7 @@ const AddUser = () => {
         e.preventDefault();
         console.log(newUser)
         if (!newUser.trim()) return;
-        const res = await axios.post(`${server}/leader/user`, { name: newUser });
+        const res = await axios.post(`${server}/user`, { name: newUser });
         setNewUser('');
         fetchUser();
         navigate('/')

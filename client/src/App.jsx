@@ -5,7 +5,6 @@ import AddUser from './components/AddUser';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './assets/Navbar';
 import Footer from './assets/Footer';
-
 import UserSelector from './components/UserSelector';
 
 function App() {
@@ -18,9 +17,6 @@ function App() {
         <Route path="/leader" element={<LeaderBoard></LeaderBoard>}></Route>
 
         <Route path="/newUser" element={<AddUser></AddUser>} ></Route>
-
-
-        <Route path="/history" element={<History></History>} ></Route>
       </Routes>
       <Footer></Footer>
     </div>
