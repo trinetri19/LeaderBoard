@@ -3,7 +3,7 @@ import { useState } from 'react';
 import axios from 'axios'
 import { useEffect } from 'react';
 import './userSelect.css'
-
+import server from '../../environment';
 import { useNavigate } from 'react-router-dom';
 
 const UserSelector = () => {
@@ -12,7 +12,7 @@ const UserSelector = () => {
     const navigate = useNavigate();
 
     const fetchUser = async () => {
-        const res = await axios.get(`http://localhost:8080/leader/user`);
+        const res = await axios.get(`${server}/leader/user`);
         setUser(res.data);
        if(res.data.length > 0) setSelectedUser(res.data[0]._id);
     }

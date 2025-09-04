@@ -4,13 +4,15 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './user.css'
 
+import server from '../../environment';
+
 const AddUser = () => {
     const [user,setUser] = useState([]);
     const [newUser, setNewUser] = useState('');
     const navigate = useNavigate();
     
       const fetchUser = async () => {
-            const res = await axios.get(`http://localhost:8080/leader/user`);
+            const res = await axios.get(`${server}/leader/user`);
             setUser(res.data);
         }
 
@@ -18,7 +20,7 @@ const AddUser = () => {
         e.preventDefault();
         console.log(newUser)
         if (!newUser.trim()) return;
-        const res = await axios.post(`http://localhost:8080/leader/user`, { name: newUser });
+        const res = await axios.post(`${server}/leader/user`, { name: newUser });
         setNewUser('');
         fetchUser();
         navigate('/')

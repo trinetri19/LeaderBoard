@@ -3,11 +3,14 @@ import { useState,useEffect } from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 import './Leader.css'
+
+import server from '../../environment';
+
 const LeaderBoard = () => {
     const [user, setUser] = useState([]);
 
     const fetchUser = async () => {
-        const res = await axios.get(`http://localhost:8080/leader/user`);
+        const res = await axios.get(`${server}/leader/user`);
         setUser(res.data);
     }
 
