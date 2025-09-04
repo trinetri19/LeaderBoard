@@ -6,7 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './assets/Navbar';
 import Footer from './assets/Footer';
 
-import UserSelector from './components/userSelector';
+import UserSelector from './components/UserSelector';
 
 function App() {
   return (
