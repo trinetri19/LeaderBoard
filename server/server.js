@@ -9,7 +9,7 @@ require('dotenv').config()
 app.use(express.json())
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://leader-board-ljpq.vercel.app/'],
+  origin: ['http://localhost:5173',"https://leader-board-system-dyh1.onrender.com"],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
