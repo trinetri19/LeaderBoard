@@ -10,16 +10,18 @@ const AddUser = () => {
     const navigate = useNavigate();
     
       const fetchUser = async () => {
-            const res = await axios.get(`${import.meta.env.VITE_APP_BASE_API}/leader/user`);
+            const res = await axios.get(`http://localhost:8080/leader/user`);
             setUser(res.data);
         }
 
-    const addnewUser = async () => {
+    const addnewUser = async (e) => {
+        e.preventDefault();
+        console.log(newUser)
         if (!newUser.trim()) return;
-        await axios.post(`${import.meta.env.VITE_APP_BASE_API}/leader/user`, { name: newUser });
+        const res = await axios.post(`http://localhost:8080/leader/user`, { name: newUser });
         setNewUser('');
         fetchUser();
-        navigate('/select')
+        navigate('/')
     }
     useEffect(()=>{
         fetchUser();
@@ -31,7 +33,7 @@ const AddUser = () => {
                 <label>Enter Name : </label>
                 <input type="text" placeholder='Enter Here' value={newUser}
                     onChange={(e) => setNewUser(e.target.value.toUpperCase())} ></input>
-                <button onClick={(e)=> {e.preventDefault(); addnewUser();}} >
+                <button onClick={ addnewUser} >
                     Add User
                 </button>
             </form>

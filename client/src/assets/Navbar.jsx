@@ -11,8 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
 const pages = [
-  { name: 'Select User', href: '/select' },
-  { name: 'History', href: '/history' },
+  { name: 'Select User', href: '/' },
   { name: 'LeaderBoard', href: '/leader' },
   { name: 'New User', href: '/newuser' }
 ];
