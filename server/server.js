@@ -9,7 +9,7 @@ require('dotenv').config()
 app.use(express.json())
 
 app.use(cors({
-  origin: ['http://localhost:5173',"https://leader-board-system-dyh1.onrender.com"],
+  origin: ['http://localhost:5173',"https://leader-board-system-dyh1.onrender.com/leader"],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
