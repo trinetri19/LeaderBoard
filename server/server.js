@@ -5,11 +5,11 @@ const cors = require('cors')
 const userRoute = require('./routes/userRoutes')
 const rewardRoute = require('./routes/rewardRoutes')
 require('dotenv').config()
-
+const PORT = process.env.PORT || 8080;
 app.use(express.json())
 
 app.use(cors({
-  origin: ['http://localhost:5173',"https://leader-board-system-dyh1.onrender.com/leader"],
+  origin: ['http://localhost:5173',"https://leader-board-system-dyh1.onrender.com"],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
@@ -24,9 +24,9 @@ async function main(){
    await mongoose.connect(process.env.mongo_url)
 }
     
-app.use("/leader/",userRoute);
-app.use("/leader/",rewardRoute);
+app.use("/",userRoute);
+app.use("/",rewardRoute);
 
-app.listen(8080,()=>{
+app.listen( PORT ,()=>{
     console.log(`server is listening on port!`)
 })
