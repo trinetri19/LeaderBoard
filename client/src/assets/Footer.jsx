@@ -26,13 +26,13 @@ const Footer = () => {
             <Typography variant="h6" gutterBottom>
               Quick Links
             </Typography>
-            <Link href="/select-user" color="inherit" underline="hover" display="block">
+            <Link to="/select-user" color="inherit" underline="hover" display="block">
               Select User
             </Link>
-            <Link href="/leaderboard" color="inherit" underline="hover" display="block">
+            <Link to="/leaderboard" color="inherit" underline="hover" display="block">
               Leaderboard
             </Link>
-            <Link href="/new-user" color="inherit" underline="hover" display="block">
+            <Link to="/new-user" color="inherit" underline="hover" display="block">
               New User
             </Link>
           </Grid>

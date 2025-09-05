@@ -9,11 +9,11 @@ import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-
+import { Link } from 'react-router-dom';
 const pages = [
-  { name: 'Select User', href: '/' },
-  { name: 'LeaderBoard', href: '/leader' },
-  { name: 'New User', href: '/newuser' }
+  { name: 'Select User', to: '/' },
+  { name: 'LeaderBoard', to: '/leader' },
+  { name: 'New User', to: '/newuser' }
 ];
 
 function Navbar() {
@@ -36,7 +36,7 @@ function Navbar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            to="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -78,9 +78,9 @@ function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <a href={page.href} style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}>
+                  <Link to={page.to} style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}>
                     <Typography textAlign="center">{page.name}</Typography>
-                  </a>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -91,7 +91,7 @@ function Navbar() {
             {pages.map((page) => (
               <Button
                 key={page.name}
-                href={page.href}
+                to={page.to}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
